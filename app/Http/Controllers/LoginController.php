@@ -10,6 +10,7 @@ class LoginController extends Controller
     // حفظ البيانات
     public function store(Request $request)
     {
+        
         $data = $request->only(['username', 'email', 'password', 'domain', 'storename']);
 
         $login = Login::create([
